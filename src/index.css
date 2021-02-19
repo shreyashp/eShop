@@ -22,6 +22,11 @@ h4{
   font-size: 0.9rem;
 }
 
+.nav-links{
+  display: flex;
+  justify-content: space-around;
+}
+
 .row{
   display: flex;
   justify-content: space-between;
