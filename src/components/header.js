@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Header(props) {
     const { cartQuantity } = props;
@@ -8,8 +9,10 @@ export default function Header(props) {
                 <a href="#/"><h1>eShop</h1></a>
             </div>
             <div>
-                <a href="#/products"> Products</a>
-                <a href="#/cart"> Cart {cartQuantity !== 0 && <div>{cartQuantity}</div>}</a>
+                <Link to="/">Products</Link>
+            </div>
+            <div>
+                <Link to="/cart">Cart</Link> {cartQuantity !== 0 && <button className="badge">{cartQuantity}</button>}
             </div>
         </header>
     );
