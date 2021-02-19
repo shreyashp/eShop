@@ -4,6 +4,7 @@ import Cart from './components/cart';
 import data from './data'; //local fetching from data.js
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 
 function App() {
 
@@ -49,13 +50,21 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <Header cartQuantity={cartItems.length}></Header>
-      <div className="row">
-        <Home onAdd={onAdd} products={products}></Home>
-        <Cart onAdd={onAdd} onRemove={onRemove} onRemoveAll={onRemoveAll} cartItems={cartItems}></Cart>
+    <Router>
+      <div className="App">
+        <Header cartQuantity={cartItems.length}></Header>
+
+        <Switch>
+          <Route path="/cart" component={Cart} >
+            <Cart onAdd={onAdd} onRemove={onRemove} onRemoveAll={onRemoveAll} cartItems={cartItems}></Cart>
+          </Route>
+          <Route path="/" exact component={Home}>
+            <Home onAdd={onAdd} products={products}></Home>
+          </Route>
+        </Switch>
+
       </div>
-    </div>
+    </Router>
   );
 }
 
