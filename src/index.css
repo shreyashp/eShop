@@ -4,6 +4,7 @@ body{
 
 h1,h2,h3{
   margin: 0.5rem 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 h1{
@@ -11,7 +12,11 @@ h1{
 }
 
 h2{
-  color:  rgb(150,150,150);
+  color:  gray;
+  font-size: 1.2 rem;
+}
+h2.title{
+  color: white;
   font-size: 1.2 rem;
 }
 h3{
@@ -20,6 +25,15 @@ h3{
 }
 h4{
   font-size: 0.9rem;
+}
+
+.nav-buttons-container{
+  align-items: right;
+  margin-left: auto;
+}
+
+.nav-buttons{
+  padding: 0.1rem;
 }
 
 .nav-links{
@@ -100,4 +114,9 @@ button.badge{
 
 .text-right{
   text-align: right;
+}
+
+.stepper-row{
+  display: flex;
+  justify-content: center;
 }
