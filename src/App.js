@@ -22,12 +22,8 @@ function App() {
             <div className="App">
               <Header ></Header>
               <Switch>
-                <Route path="/cart" component={Cart} >
-                  <Cart></Cart>
-                </Route>
-                <Route path="/" exact component={Home}>
-                  <Home ></Home>
-                </Route>
+                <Route path="/cart" component={Cart} ></Route>
+                <Route path="/" exact component={Home}></Route>
               </Switch>
             </div>
           </Router>
