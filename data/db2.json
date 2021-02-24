@@ -1,0 +1,113 @@
+{
+    "store":[
+        {
+            "id": 1,
+            "Brand":"Roadster",
+            "Name":"Men Maroon Printed Round Neck T-Shirt",
+            "Price":299,
+            "Category": "Clothing",
+            "Url":"https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/2308267/2018/1/29/11517216335231-Roadster-Men-Maroon-Printed-Round-Neck-T-shirt-5591517216335098-1.jpg"
+        }
+,
+        {
+            "id": 2,
+            "Brand":"HERE&NOW ",
+            "Name":"Men Red & Black Regular Fit Checked Casual Shirt",
+            "Price":824,
+            "Category": "Clothing",
+            "Url":"https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/2414313/2018/3/13/11520926368495-HERENOW-Men-Red--Black-Regular-Fit-Checked-Casual-Shirt-8881520926368447-3.jpg"
+
+        },
+        {
+            "id": 3,
+            "Brand":"Nike ",
+            "Name":"Men Black Solid AS M NK Essential Pants",
+            "Price":2446,
+            "Category": "Clothing",
+            "Url":"https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/12921106/2020/11/24/317a60e5-efc1-4ef9-8daa-83675f0dc4ad1606211358612NikeEssentialMensKnitRunningPants2.jpg"
+        }
+,
+        {
+            "id": 4,
+            "Brand":"U.S. Polo Assn.",
+            "Name":"Men Olive Green Camouflage Print Padded Jacket",
+            "Price":2000,
+            "Category": "Clothing",
+            "Url":"https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/12916304/2020/12/24/b62eefe7-6fd6-42c4-a03e-20bbd524a5061608793850913-US-Polo-Assn-Denim-Co-Men-Jackets-9901608793848832-3.jpg"
+
+        },
+        {
+            "id": 5,
+            "Brand":"Woodland",
+            "Name":" Men Olive Green & Black Self-Striped Sneakers",
+            "Price":2605,
+            "Category": "Footwear",
+            "Url":"https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/13309946/2021/2/11/41491c79-2d0f-465d-bb31-8fc668f575d61613034311424-Woodland-Men-Olive-Green--Black-Self-Striped-Sneakers-810161-1.jpg"
+        }
+,
+        {
+            "id": 6,
+            "Brand":"LOCOMOTIVE ",
+            "Name":"Men Grey Sneakers",
+            "Price":746,
+            "Category": "Footwear",
+            "Url":"https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/9785495/2019/6/14/906f1f81-db79-481b-9962-6306abe4a1bf1560500752934-LOCOMOTIVE-Men-Grey-Sneakers-5091560500751016-1.jpg"
+
+        },
+        {
+
+            "id": 7,
+            "Brand":"El Paso ",
+            "Name":"Men Brown Derbys",
+            "Price":892,
+            "Category": "Footwear",
+            "Url":"https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/9249461/2019/6/27/0a7eb748-61fe-44cd-bda6-136e54ebab261561633261914-El-Paso-Men-Brown-Derbys-7821561633260133-1.jpg"
+        }
+,
+        {
+            "id": 8,
+            "Brand":"boAt",
+            "Name":"Rockerz 255 Active Black Wireless Neckband ",
+            "Price":1499,
+            "Category": "Gadgets",
+            "Url":"https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/6794721/2020/9/1/ed37e198-ef3c-44be-b51e-8b2c27a532561598950725717-boAt-Rockerz-255-Active-Black-Wireless-Neckband-with-Sports--1.jpg"
+
+        },
+        {
+            "id": 9,
+            "Brand":"Realme ",
+            "Name":"Unisex Black SpO2 Monitor and Large Color Touch Screen Watch",
+            "Price":"3999",
+            "Category": "Gadgets",
+            "Url":"https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/13089672/2021/1/20/52c98624-390f-4aec-b3b2-9a8b81ad431f1611133634601-Realme-Unisex-Black-SpO2-Monitor-and-Large-Color-Touch-Scree-7.jpg"
+        }
+,
+        {
+            "id": 10,
+            "Brand":"pTron",
+            "Name":" Black And Red Evo True Wireless In-Ear Bluetooth Bassbuds",
+            "Price":1119,
+            "Category": "Gadgets",
+            "Url":"https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/12819972/2020/10/28/0dc5cc6e-84ba-4244-a843-d1cecdda1fa41603881079048pTronBassbudsEvoTrueWirelessBluetoothHeadphoneswithDeepBassB1.jpg"
+
+        },
+        {
+            "id": 11,
+            "Brand":"HRX by Hrithik Roshan",
+            "Name":"Men Aviator Sunglasses MFB-PN-CY-59512",
+            "Price":1649,
+            "Category": "Accessory",
+            "Url":"https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/2311880/2018/6/4/83cfebd8-0727-450c-a238-d3f5493925021528117724867-HRX-by-Hrithik-Roshan-Men-Aviator-Sunglasses-MFB-PN-CY-59512-7191528117724688-1.jpg"
+        }
+,
+        {
+            "id": 12,
+            "Brand":"Tommy Hilfiger",
+            "Name":"Men Square Sunglasses TH 2527 I Blkgr 35 C2",
+            "Price":4933,
+            "Category": "Accessory",
+            "Url":"https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/2020571/2017/9/14/11505374940897-Tommy-Hilfiger-Men-Square-Sunglasses-2881505374940804-1.jpg"
+
+        }
+    ]
+}
