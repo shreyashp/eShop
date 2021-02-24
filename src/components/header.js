@@ -1,59 +1,6 @@
-/*import React from 'react';
-import AppBar from '@material-ui/core/AppBar';
-import { Link } from 'react-router-dom';
-import ShopIcon from '@material-ui/icons/Shop';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import Badge from '@material-ui/core/Badge';
-export default function Header(props) {
-
-  const { cartQuantity } = props;
-  const useStyles = makeStyles((theme) => ({
-
-    root: {
-      flexGrow: 1,
-    },
-    icon: {
-      marginRight: theme.spacing(1),
-    },
-    title: {
-      display: 'none',
-      [theme.breakpoints.up('sm')]: {
-        display: 'block',
-      },
-      link: {
-        marginRight: theme.spacing(4)
-      }
-    }
-  }));
-  const classes = useStyles();
-
-
-  return (
-
-    <React.Fragment>
-      <div className={classes.root}>
-        <AppBar position="static">
-          <Toolbar>
-            <ShopIcon edge="start" className={classes.icon} fontSize="large" />
-            <Typography className={classes.title} href="#/" variant="h6" color="inherit">
-              EShop
-            </Typography>
-            <div align="nav-links">
-              <Link to="/">Products</Link> <Link to="/cart"><ShoppingCartIcon fontSize="medium" ></ShoppingCartIcon ></Link> {cartQuantity !== 0 && <Badge badgeContent={cartQuantity} color="secondary"></Badge>}
-            </div>
-          </Toolbar>
-
-        </AppBar>
-      </div>
-    </React.Fragment>
-  );*/
-
-
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useSelector, useDispatch } from 'react-redux'
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -69,7 +16,6 @@ import { Button } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import Badge from '@material-ui/core/Badge';
-import ShopIcon from '@material-ui/icons/Shop';
 
 
 
@@ -121,7 +67,13 @@ ScrollTop.propTypes = {
 
 export default function BackToTop(props) {
   const classes = useStyles();
-  const { cartQuantity } = props;
+  const cartItems = useSelector(state => state.cart.cartItems)
+
+  var totalCartQuantity = 0;
+  const CartQuantity = cartItems.map((item) => {
+    totalCartQuantity = totalCartQuantity + item.qty;
+  })
+
 
   return (
     <React.Fragment>
@@ -131,7 +83,7 @@ export default function BackToTop(props) {
           <Typography variant="h6"><h2 className="title">Eshop</h2></Typography>
           <div className="nav-buttons-container row">
             <Button className="nav-buttons"><Link to="/">Products</Link></Button>
-            <Button className="nav-buttons"><Link to="/cart"><ShoppingCartIcon fontSize="medium" ></ShoppingCartIcon > {cartQuantity !== 0 && <Badge badgeContent={cartQuantity} color="secondary"></Badge>}</Link></Button>
+            <Button className="nav-buttons"><Link to="/cart"><ShoppingCartIcon fontSize="medium" ></ShoppingCartIcon > {CartQuantity} {totalCartQuantity !== 0 && <Badge badgeContent={totalCartQuantity} color="secondary"></Badge>}</Link></Button>
           </div>
         </Toolbar>
       </AppBar>
@@ -144,17 +96,3 @@ export default function BackToTop(props) {
     </React.Fragment>
   );
 }
-
-/* {<header className=" row block-head center">
-           <div>
-               <a href="#/"><h1>eShop</h1></a>
-           </div>
-           <div>
-               <Link to="/">Products</Link>
-           </div>
-           <div>
-               <Link to="/cart">Cart</Link> {cartQuantity !== 0 && <button className="badge">{cartQuantity}</button>}
-           </div>
-       </header>
-   }
-}*/
