@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux'
+import { addToCart, removeAllQuantity, removeFromCart } from '../redux'
 import Chip from '@material-ui/core/Chip';
 import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
@@ -14,22 +16,10 @@ import CancelIcon from '@material-ui/icons/Cancel';
 import { Button } from '@material-ui/core';
 
 export default function Cart(props) {
-  const { cartItems, onAdd, onRemove, onRemoveAll } = props;
   var finalcost = 0;
 
-  /*const cart = cartItems.map((item) => (
-    <div key={item.id} className="row">
-      <div className="col-2">
-        <button onClick={() => onRemoveAll(item)} className="badge">x</button>
-      </div>
-      <div className="col-2">
-        <button onClick={() => onAdd(item)} className="add">+</button>
-        <button className="add">{item.qty}</button>
-        <button onClick={() => onRemove(item)} className="remove">-</button>
-      </div>
-      <br />
-    </div>
-  ));*/
+  const cartItems = useSelector(state => state.cart.cartItems);
+  const dispatch = useDispatch()
 
   const Cost = cartItems.map((item) => {
     finalcost = finalcost + (item.qty * item.Price)
@@ -41,14 +31,6 @@ export default function Cart(props) {
   });
 
   const classes = useStyles();
-  /*function ccyFormat(num) {
-    return `${num.toFixed(2)}`;
-  }*/
-
-  /*function priceRow(qty, unit) {
-    return qty * unit;
-  }*/
-
 
   return (
     <TableContainer component={Paper}>
@@ -76,16 +58,16 @@ export default function Cart(props) {
             <TableRow key={item.id}>
               <TableCell>
                 <div className="col-2">
-                  <CancelIcon onClick={() => onRemoveAll(item)} color="error" fontSize="large"></CancelIcon>
+                  <CancelIcon onClick={() => dispatch(removeAllQuantity(item))} color="error" fontSize="large"></CancelIcon>
                 </div>
               </TableCell>
               <TableCell>{item.Name}</TableCell>
               <TableCell align="right">₹{item.Price}</TableCell>
               <TableCell align="center">
                 <div className="stepper-row">
-                  <AddCircleIcon onClick={() => onAdd(item) } fontSize="large" color="primary"></AddCircleIcon>
+                  <AddCircleIcon onClick={() => dispatch(addToCart(item))} fontSize="large" color="primary"></AddCircleIcon>
                   <Chip size="medium" label={item.qty} />
-                  <RemoveCircleIcon onClick={() => onRemove(item)} fontSize="large" color="secondary"></RemoveCircleIcon>
+                  <RemoveCircleIcon onClick={() => dispatch(removeFromCart(item))} fontSize="large" color="secondary"></RemoveCircleIcon>
                 </div>
               </TableCell>
               <TableCell align="right">₹{item.qty * item.Price}</TableCell>
@@ -102,37 +84,5 @@ export default function Cart(props) {
       </Table>
     </TableContainer>
 
-  );
-  {/* <aside className="block-cart col-1">
-            <h2>
-                Cart Items
-            </h2>
-            <div>
-                {cartItems.length === 0 && <div>Cart is Empty</div>}
-            </div>
-
-            <div>
-                {cartItems.length !== 0 &&
-                    <div className="row">
-                        <h4>Cancel</h4>
-                        <h4>Name</h4>
-                        <h4>Price</h4>
-                        <h4 >Quantity</h4>
-                        <h4>Total Price</h4>
-                    </div>}
-            </div>
-
-            {cart}
-
-            <div>
-                {cartItems.length !== 0 &&
-                    <div>
-                        <hr></hr>
-                        <div className="row">
-                            <h4>Total Cost</h4>
-                            <h4 className="text-right">{Cost}Rs.{finalcost}</h4>
-                        </div>
-                    </div>}
-            </div>
-                </aside>*/}
+  )
 }
