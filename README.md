@@ -9,17 +9,17 @@
 
   Make sure to have 'npm' installed beforehand, to check the node.js version type below command in terminal
   
-  ### 'node -v'
+  ### `node -v`
   
   To check the npm version type below command in terminal
   
-   ### 'npm -v'
+   ### `npm -v`
 
 ## 2. Install REDUX DEV TOOLS
 
   I. install the redux dev tools extension (for google chrome) from the extension store or below link:
   
-  ### https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en
+  ### `https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en`
 
 ## 3. Install JSON_SERVER
 
@@ -29,7 +29,7 @@
   
   or use the link below for more details
   
-  ### https://www.npmjs.com/package/json-server
+  ### `https://www.npmjs.com/package/json-server`
   
 ## 4. Initializing the JSON-SERVER
 
