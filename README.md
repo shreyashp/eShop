@@ -7,14 +7,31 @@
 
   ### `npm install`
 
-make sure to have 'npm' installed beforehand.
+  Make sure to have 'npm' installed beforehand, to check the node.js version type below command in terminal
+  
+  ### 'node -v'
+  
+  To check the npm version type below command in terminal
+  
+   ### 'npm -v'
 
 ## 2. Install REDUX DEV TOOLS
 
   I. install the redux dev tools extension (for google chrome) from the extension store or below link:
-  https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en
+  
+  ### https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en
 
-## 3. Initializing the JSON-SERVER
+## 3. Install JSON_SERVER
+
+  I. Run the below command in terminal to install the json-server for hosting the data required by the application to fetch
+  
+  ### `npm install -g json-server`
+  
+  or use the link below for more details
+  
+  ### https://www.npmjs.com/package/json-server
+  
+## 4. Initializing the JSON-SERVER
 
   I. navigate to (project_folder)>>data in your terminal
 
@@ -23,7 +40,7 @@ make sure to have 'npm' installed beforehand.
 
   ### `json-server db.json --port 8000`
 
-## 3. Start the application
+## 5. Start the application
 
   I. Open another terminal in (project_folder) and run below command to start the application
      in default browser (Chrome Preferably for REDUX DEV TOOLS)
